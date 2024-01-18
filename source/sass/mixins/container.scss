@@ -1,0 +1,5 @@
+@mixin container {
+  max-width: $desktop;
+  width: 100%;
+  margin: 0 auto;
+}

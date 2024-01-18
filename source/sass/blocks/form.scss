@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+
+  &__label {
+    width: 18px;
+    height: 18px;
+    background: url("../img/for-sprite/search.svg") no-repeat center / cover;
+    cursor: pointer;
+  }
+
+  &__field {
+    @include clear-input;
+    color: #2b2b2b;
+    font-size: rem(14);
+    line-height: rem(16);
+    width: 62px;
+    text-transform: uppercase;
+
+    &::placeholder {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+}

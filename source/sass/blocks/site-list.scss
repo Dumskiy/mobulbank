@@ -1,0 +1,63 @@
+.site-list {
+  @include clear-list;
+  display: flex;
+  color: $white;
+  font-size: rem(14);
+  line-height: rem(60);
+  text-transform: uppercase;
+
+  &__item {
+    padding: 0 15px;
+
+    &--dropdown {
+      display: flex;
+      column-gap: 5px;
+      align-items: center;
+
+      &:hover,
+      &:focus-within {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 7px;
+        height: 4px;
+        background: url("../../img/for-sprite/arrow-down.svg") no-repeat center / cover;
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+    // tt
+    text-decoration: none;
+    display: block;
+    opacity: 0.8;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &--current {
+      position: relative;
+      opacity: 1;
+      cursor: default;
+
+      &::after {
+        content: "";
+        width: 51px;
+        height: 5px;
+        background-color: $green-5;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

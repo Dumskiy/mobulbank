@@ -1,0 +1,20 @@
+/* VARIABLES */
+@import "common/variables.scss";
+
+/* MIXINS */
+@import "mixins/mixins.scss";
+
+/* FONTS */
+@import "common/fonts.scss";
+
+/* VISUALLY-HIDDEN */
+@import "common/visually-hidden.scss";
+
+/* BLOCKS */
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/logo.scss";
+@import "blocks/form.scss";
+@import "blocks/navigation.scss";
+@import "blocks/site-list.scss";
+@import "blocks/user-list.scss";

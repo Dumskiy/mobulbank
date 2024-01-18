@@ -1,0 +1,80 @@
+.user-list {
+  @include clear-list;
+  display: flex;
+  color: $white;
+  font-size: rem(14);
+  line-height: rem(60);
+  text-transform: uppercase;
+
+  &__item {
+    padding: 0 15px;
+
+    &--dropdown {
+      display: flex;
+      column-gap: 5px;
+      align-items: center;
+
+      &:hover,
+      &:focus-within {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+
+      &::after {
+        content: "";
+        width: 7px;
+        height: 4px;
+        background: url("../../img/for-sprite/arrow-down.svg") no-repeat center / cover;
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &--notice {
+      background: url("../../img/for-sprite/bell.svg") no-repeat center;
+      min-width: 45px;
+      min-height: 60px;
+    }
+
+    &--profile {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      &::before {
+        content: "";
+        width: 17px;
+        height: 17px;
+        background: url("../../img/for-sprite/building.svg") no-repeat center / cover;
+      }
+    }
+  }
+
+  &__quantity-notice {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    background-color: $red-10;
+    font-family: $special-font;
+    font-size: rem(10);
+    line-height: rem(14);
+    font-weight: 500;
+    border: 2px solid $blue-5;
+    border-radius: 50%;
+    left: 50%;
+    bottom: 50%;
+  }
+}

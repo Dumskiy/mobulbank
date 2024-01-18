@@ -1,0 +1,17 @@
+.navigation {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    min-width: 42px;
+    min-height: 42px;
+    background: url("../../img/for-sprite/circle-with-cross.svg") no-repeat center / cover;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}

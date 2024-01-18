@@ -1,0 +1,11 @@
+@use "sass:math";
+
+/* % */
+@function prc($pxOne, $pxTwo) {
+  @return math.div($pxOne, $pxTwo) * 100%;
+}
+
+/* rem */
+@function rem($px) {
+  @return math.div($px, 16) + rem;
+}
