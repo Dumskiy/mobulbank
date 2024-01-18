@@ -25,7 +25,11 @@
         content: "";
         width: 7px;
         height: 4px;
-        background: url("../../img/for-sprite/arrow-down.svg") no-repeat center / cover;
+        mask-image: url("../../img/icons/stack.svg#arrow-down");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-color: $white;
         transition: transform 0.3s;
       }
     }

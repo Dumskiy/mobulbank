@@ -7,7 +7,11 @@
   &__link {
     min-width: 42px;
     min-height: 42px;
-    background: url("../../img/for-sprite/circle-with-cross.svg") no-repeat center / cover;
+    mask-image: url("../../img/icons/stack.svg#circle-with-cross");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    background-color: $white;
 
     &:hover,
     &:focus {

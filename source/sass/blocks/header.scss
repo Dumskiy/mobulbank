@@ -23,7 +23,11 @@
       position: absolute;
       top: 0;
       left: 100%;
-      background: url("../../img/for-sprite/triangle.svg") no-repeat center / cover;
+      mask-image: url("../../img/icons/stack.svg#triangle");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $white;
     }
   }
 

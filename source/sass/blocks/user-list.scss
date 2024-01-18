@@ -25,7 +25,11 @@
         content: "";
         width: 7px;
         height: 4px;
-        background: url("../../img/for-sprite/arrow-down.svg") no-repeat center / cover;
+        mask-image: url("../../img/icons/stack.svg#arrow-down");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-color: $white;
         transition: transform 0.3s;
       }
     }
@@ -43,9 +47,23 @@
     }
 
     &--notice {
-      background: url("../../img/for-sprite/bell.svg") no-repeat center;
       min-width: 45px;
       min-height: 60px;
+
+      &::before {
+        content: "";
+        width: 15px;
+        height: 19px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        mask-image: url("../../img/icons/stack.svg#bell");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-color: $white;
+      }
     }
 
     &--profile {
@@ -57,7 +75,11 @@
         content: "";
         width: 17px;
         height: 17px;
-        background: url("../../img/for-sprite/building.svg") no-repeat center / cover;
+        mask-image: url("../../img/icons/stack.svg#building");
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: cover;
+        background-color: $white;
       }
     }
   }

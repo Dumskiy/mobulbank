@@ -11,6 +11,7 @@ import del from 'del';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import webp from 'gulp-webp';
+import svgSprite from 'gulp-svg-sprite';
 
 /* Styles */
 export const styles = () => {
@@ -42,13 +43,26 @@ const scripts = () => {
 
 /* Images */
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,svg}')
+  return gulp.src(['source/img/*.{png,jpg,svg}', '!source/img/icons/*.svg'])
     .pipe(imagemin())
     .pipe(gulp.dest('build/img'))
 };
 
+/* Sprite */
+const createSprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(imagemin())
+    .pipe(svgSprite({
+      mode: {
+        stack: true
+      }
+    }))
+    .pipe(rename('stack.svg'))
+    .pipe(gulp.dest('build/img/icons'))
+}
+
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg,svg}')
+  return gulp.src(['source/img/*.{png,jpg,svg}', '!source/img/icons/*.svg'])
     .pipe(gulp.dest('build/img'))
 };
 
@@ -111,6 +125,7 @@ export const build = gulp.series(
     styles,
     html,
     scripts,
+    createSprite,
     createWebp
   ),
 );
@@ -124,6 +139,7 @@ export default gulp.series(
     styles,
     html,
     scripts,
+    createSprite,
     createWebp
   ),
   gulp.series(

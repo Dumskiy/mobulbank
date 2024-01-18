@@ -6,8 +6,12 @@
   &__label {
     width: 18px;
     height: 18px;
-    background: url("../img/for-sprite/search.svg") no-repeat center / cover;
     cursor: pointer;
+    mask-image: url("../../img/icons/stack.svg#search");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    background-color: $gray-60;
   }
 
   &__field {
