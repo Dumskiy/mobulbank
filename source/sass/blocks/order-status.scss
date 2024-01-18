@@ -1,0 +1,15 @@
+.order-status {
+  background-color: $green-10;
+  padding: 3px 8px;
+  color: $white;
+  width: fit-content;
+  text-align: center;
+  font-size: rem(11);
+  font-weight: 500;
+  line-height: rem(13);
+  border-radius: 9px;
+
+  &__state {
+    text-transform: uppercase;
+  }
+}

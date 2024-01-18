@@ -1,0 +1,8 @@
+.main {
+  &__container {
+    @include container;
+    background-color: $gray-5;
+
+    height: 90vh;
+  }
+}

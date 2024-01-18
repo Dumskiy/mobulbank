@@ -1,0 +1,52 @@
+.order {
+  width: prc(900, 1280);
+  margin-left: auto;
+
+  background-color: $white;
+
+  &__header {
+    padding: 16px 32px;
+    background-color: $gray-10;
+
+    display: flex;
+    align-items: center;
+    column-gap: 27px;
+  }
+
+  &__title {
+    order: 2;
+    margin: 0;
+    font-size: rem(24);
+    line-height: rem(28);
+    font-weight: 300;
+  }
+
+  &__button {
+    @include clear-input;
+    order: 1;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+
+    mask-image: url("../../img/icons/stack.svg#cross");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 16px auto;
+    background-color: $gray-60;
+  }
+
+  &__content {
+    margin-left: prc(164, 900);
+    margin-right: prc(151, 900);
+    padding: 26px 20px;
+  }
+
+  &__payment {
+    margin-bottom: 10px;
+  }
+
+  &__status {
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+}

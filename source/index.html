@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Модульбанк</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body class="page__body">
   <header class="header">
     <div class="header__container">
@@ -34,7 +36,7 @@
           </li>
         </ul>
         <a class="navigation__link" href="#">
-          <span class="visually-hidden">Новый платеж</span>
+          <span class="visually-hidden">Создать новый платеж</span>
         </a>
         <ul class="navigation__list user-list">
           <li class="user-list__item">
@@ -50,16 +52,95 @@
           </li>
         </ul>
       </nav>
-
-
-
-
     </div>
-
   </header>
+
   <main class="main">
-    <p>Function test</p>
+    <div class="main__container">
+      <div class="order">
+        <header class="order__header">
+          <h2 class="order__title">Платежное поручение № <span class="order__number">5241234</span> от <span class="order__date">23.09.2015</span></h2>
+          <button class="order__button" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </header>
+
+        <div class="order__content">
+
+          <div class="order__payment payment">
+            <p class="payment__sum">– 23 500,00 ₽</p>
+            <p class="payment__sent">со счета: <span class="payment__account">Расчетный счет (***012345)</span></p>
+          </div>
+
+          <p class="order__status order-status">
+            <span class="order-status__state">Исполнен</span>,&nbsp;
+            <span class="order-status__date">21 июня 15:33</span>
+          </p>
+
+          <div class="order__company company-card">
+            <div class="company-card__details company-details">
+              <h3 class="company-details__name">ООО "Родные просторы"</h3>
+              <ul class="company-details__list">
+                <li class="company-details__item">
+                  <p>ИНН: 22341497819132</p>
+                </li>
+                <li class="company-details__item">
+                  <p>Банк: ОАО Сбербанк</p>
+                </li>
+                <li class="company-details__item">
+                  <p>БИК: 2352362365</p>
+                </li>
+                <li class="company-details__item">
+                  <p>Счет: 40802810970010000395</p>
+                </li>
+              </ul>
+            </div>
+            <ul class="company-card__indicators indicators-list">
+              <li class="indicators-list__item">
+                <p class="indicators-list__name">Высокая финансовая усойчивость</p>
+                <span class="indicators-list__progress">88</span>
+              </li>
+              <li class="indicators-list__item">
+                <p class="indicators-list__name">Высокая благонадежность</p>
+                <span class="indicators-list__progress">100</span>
+              </li>
+              <li class="indicators-list__item">
+                <p class="indicators-list__name">Кредитоспособность 44,5 млрд ₽</p>
+                <span class="indicators-list__progress">1 класс</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="order__total">
+            Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
+          </p>
+
+          <p class="order__commission">
+            Комиссия банка: 70 р. Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным.
+            Точный размер комиссии определяется после передачи платежного документа на обработку в банк.
+          </p>
+        </div>
+
+        <footer class="order__footer ">
+          <ul class="order__tools tools-list">
+            <li class="tools-list__item">
+              <button class="tools-list__button" type="button">Повторить</button>
+            </li>
+            <li class="tools-list__item">
+              <button class="tools-list__button" type="button">В избранное</button>
+            </li>
+            <li class="tools-list__item">
+              <button class="tools-list__button" type="button">Спросить</button>
+            </li>
+            <li class="tools-list__item">
+              <button class="tools-list__button" type="button">Действия</button>
+            </li>
+          </ul>
+        </footer>
+      </div>
+    </div>
   </main>
   <!-- <script src="js/index.js" type="module"></script> -->
 </body>
+
 </html>
