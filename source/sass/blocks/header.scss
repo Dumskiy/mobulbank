@@ -3,6 +3,7 @@
     @include container;
     background: linear-gradient(90deg, #00417b 0%, #237cb1 50.26%, #2580b2 52.72%, #46d2cc 100%);
     display: flex;
+    position: relative;
   }
 
   &__wrapper {

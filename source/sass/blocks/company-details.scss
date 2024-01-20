@@ -1,0 +1,26 @@
+.company-details {
+  color: $gray-50;
+  white-space: nowrap;
+
+
+  &__name {
+    margin: 0 0 13px;
+    font-size: rem(20);
+    line-height: rem(23);
+    font-weight: 400;
+  }
+
+  &__list {
+    @include clear-list;
+
+    font-size: rem(16);
+    line-height: rem(28);
+    font-weight: 300;
+  }
+
+  &__item {
+    p {
+      margin: 0;
+    }
+  }
+}

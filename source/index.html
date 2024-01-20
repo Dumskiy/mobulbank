@@ -77,70 +77,87 @@
             <span class="order-status__date">21 июня 15:33</span>
           </p>
 
-          <div class="order__company company-card">
-            <div class="company-card__details company-details">
-              <h3 class="company-details__name">ООО "Родные просторы"</h3>
-              <ul class="company-details__list">
-                <li class="company-details__item">
-                  <p>ИНН: 22341497819132</p>
+          <div class="order__inner">
+            <div class="order__company company-card">
+              <div class="company-card__details company-details">
+                <h3 class="company-details__name">ООО "Родные просторы"</h3>
+                <ul class="company-details__list">
+                  <li class="company-details__item">
+                    <p>ИНН: 22341497819132</p>
+                  </li>
+                  <li class="company-details__item">
+                    <p>Банк: ОАО Сбербанк</p>
+                  </li>
+                  <li class="company-details__item">
+                    <p>БИК: 2352362365</p>
+                  </li>
+                  <li class="company-details__item">
+                    <p>Счет: 40802810970010000395</p>
+                  </li>
+                </ul>
+              </div>
+              <ul class="company-card__performance">
+                <li class="performance__item indicator" data-prc="88">
+                  <a class="indicator__link" href="#">Высокая финансовая усойчивость</a>
+                  <div class="indicator__progress-wrapper">
+                    <p class="indicator__value">88</p>
+                    <svg class="indicator__progress-bar" width="44" height="44" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                      <circle r="21" cx="22" cy="22" fill="transparent" stroke="#e6e6e6" stroke-width="2" stroke-dasharray="131.95px" stroke-dashoffset="0"></circle>
+                      <circle class="indicator__progress-circle" r="21" cx="22" cy="22" stroke="#6eba64" stroke-width="2" stroke-linecap="butt" stroke-dashoffset="131.95px" fill="transparent" stroke-dasharray="131.95px"></circle>
+                    </svg>
+                    </div>
                 </li>
-                <li class="company-details__item">
-                  <p>Банк: ОАО Сбербанк</p>
+                <li class="performance__item indicator" data-prc="100">
+                  <a class="indicator__link" href="#">Высокая благонадежность</a>
+                  <div class="indicator__progress-wrapper">
+                    <p class="indicator__value">100</p>
+                    <svg class="indicator__progress-bar" width="44" height="44" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                      <circle r="21" cx="22" cy="22" fill="transparent" stroke="#e6e6e6" stroke-width="2" stroke-dasharray="131.95px" stroke-dashoffset="0"></circle>
+                      <circle class="indicator__progress-circle" r="21" cx="22" cy="22" stroke="#6eba64" stroke-width="2" stroke-linecap="butt" stroke-dashoffset="131.95px" fill="transparent" stroke-dasharray="131.95px"></circle>
+                    </svg>
+                  </div>
                 </li>
-                <li class="company-details__item">
-                  <p>БИК: 2352362365</p>
-                </li>
-                <li class="company-details__item">
-                  <p>Счет: 40802810970010000395</p>
+                <li class="performance__item indicator">
+                  <a class="indicator__link" href="#">Кредитоспособность 44,5 млрд ₽</a>
+                  <div class="indicator__progress-wrapper indicator__progress-wrapper--class">
+                    <p class="indicator__value">1 класс</p>
+                  </div>
                 </li>
               </ul>
             </div>
-            <ul class="company-card__indicators indicators-list">
-              <li class="indicators-list__item">
-                <p class="indicators-list__name">Высокая финансовая усойчивость</p>
-                <span class="indicators-list__progress">88</span>
-              </li>
-              <li class="indicators-list__item">
-                <p class="indicators-list__name">Высокая благонадежность</p>
-                <span class="indicators-list__progress">100</span>
-              </li>
-              <li class="indicators-list__item">
-                <p class="indicators-list__name">Кредитоспособность 44,5 млрд ₽</p>
-                <span class="indicators-list__progress">1 класс</span>
-              </li>
-            </ul>
+
+            <p class="order__total">
+              Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
+            </p>
           </div>
 
-          <p class="order__total">
-            Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
-          </p>
-
           <p class="order__commission">
-            Комиссия банка: 70 р. Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным.
+            Комиссия банка: 70 р.<br>
+            Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным.
             Точный размер комиссии определяется после передачи платежного документа на обработку в банк.
           </p>
         </div>
 
-        <footer class="order__footer ">
-          <ul class="order__tools tools-list">
-            <li class="tools-list__item">
-              <button class="tools-list__button" type="button">Повторить</button>
+        <footer class="order__footer">
+          <ul class="order__toolbar toolbar">
+            <li class="toolbar__item">
+              <button class="toolbar__button toolbar__button--repeat" type="button">Повторить</button>
             </li>
-            <li class="tools-list__item">
-              <button class="tools-list__button" type="button">В избранное</button>
+            <li class="toolbar__item">
+              <button class="toolbar__button toolbar__button--favorites" type="button">В избранное</button>
             </li>
-            <li class="tools-list__item">
-              <button class="tools-list__button" type="button">Спросить</button>
+            <li class="toolbar__item">
+              <button class="toolbar__button toolbar__button--ask" type="button">Спросить</button>
             </li>
-            <li class="tools-list__item">
-              <button class="tools-list__button" type="button">Действия</button>
+            <li class="toolbar__item">
+              <button class="toolbar__button toolbar__button--actions" type="button">Действия</button>
             </li>
           </ul>
         </footer>
       </div>
     </div>
   </main>
-  <!-- <script src="js/index.js" type="module"></script> -->
+  <script src="js/index.js" type="module"></script>
 </body>
 
 </html>

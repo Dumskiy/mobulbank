@@ -3,6 +3,6 @@
     @include container;
     background-color: $gray-5;
 
-    height: 90vh;
+    height: calc(100vh - 60px);
   }
 }

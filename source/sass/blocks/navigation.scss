@@ -5,6 +5,10 @@
   align-items: center;
 
   &__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     min-width: 42px;
     min-height: 42px;
     mask-image: url("../../img/icons/stack.svg#circle-with-cross");

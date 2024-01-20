@@ -1,0 +1,47 @@
+.indicator {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    color: $blue-10;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: none;
+
+    font-size: rem(8);
+    line-height: rem(10);
+  }
+
+  &__progress-wrapper {
+    position: relative;
+
+    // &--class {
+
+    //   &::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 44px;
+    //     height: 44px;
+    //   }
+    // }
+  }
+
+  &__value {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: rem(12);
+    font-weight: 500;
+
+  }
+
+  &__progress-bar {
+    display: block;
+  }
+
+  &__progress-circle {
+    transition: stroke-dashoffset 4s;
+  }
+}

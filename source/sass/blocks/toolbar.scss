@@ -1,0 +1,54 @@
+.toolbar {
+  @include clear-list;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 19px 0;
+
+  &__button {
+    @include clear-input;
+    color: $gray-50;
+    font-size: rem(14);
+    line-height: rem(16);
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+      background-color: $gray-60;
+    }
+
+    &--repeat {
+      &::before {
+        mask-image: url("../../img/icons/stack.svg#arrow-repeat");
+      }
+    }
+
+    &--favorites {
+      &::before {
+        mask-image: url("../../img/icons/stack.svg#star");
+      }
+    }
+
+    &--ask {
+      &::before {
+        mask-image: url("../../img/icons/stack.svg#ask");
+      }
+    }
+
+    &--actions {
+      &::before {
+        mask-image: url("../../img/icons/stack.svg#three-dots");
+      }
+    }
+  }
+}
