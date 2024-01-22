@@ -1,18 +1,23 @@
 .site-list {
   @include clear-list;
   display: flex;
-  color: $white;
+  flex-wrap: wrap;
   font-size: rem(14);
   line-height: rem(60);
   text-transform: uppercase;
+  color: $white;
 
   &__item {
-    padding: 0 15px;
+    padding: 0 20px;
+
+    &:nth-child(2) {
+      padding: 0 17px;
+    }
 
     &--dropdown {
       display: flex;
-      column-gap: 5px;
       align-items: center;
+      column-gap: 5px;
 
       &:hover,
       &:focus-within {
@@ -25,7 +30,7 @@
         content: "";
         width: 7px;
         height: 4px;
-        mask-image: url("../../img/icons/stack.svg#arrow-down");
+        mask-image: url("../img/icons/stack.svg#arrow-down");
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: cover;
@@ -36,15 +41,20 @@
   }
 
   &__link {
-    color: inherit;
-    // tt
-    text-decoration: none;
     display: block;
+    text-decoration: none;
+    color: inherit;
     opacity: 0.8;
 
-    &:hover,
-    &:focus {
-      opacity: 1;
+    &:not(.site-list__link--current) {
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 0.5;
+      }
     }
 
     &--current {
@@ -54,13 +64,13 @@
 
       &::after {
         content: "";
-        width: 51px;
-        height: 5px;
-        background-color: $green-5;
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        width: 51px;
+        height: 5px;
+        background-color: $green-20;
       }
     }
   }

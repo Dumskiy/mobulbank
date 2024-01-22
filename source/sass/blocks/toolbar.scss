@@ -8,14 +8,13 @@
 
   &__button {
     @include clear-input;
-    color: $gray-50;
-    font-size: rem(14);
-    line-height: rem(16);
-    cursor: pointer;
-
     display: flex;
     align-items: center;
     column-gap: 10px;
+    font-size: rem(14);
+    line-height: rem(16);
+    color: $gray-80;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -24,31 +23,40 @@
       mask-repeat: no-repeat;
       mask-position: center;
       mask-size: cover;
-      background-color: $gray-60;
+      background-color: $gray-90;
     }
 
     &--repeat {
       &::before {
-        mask-image: url("../../img/icons/stack.svg#arrow-repeat");
+        mask-image: url("../img/icons/stack.svg#arrow-repeat");
       }
     }
 
     &--favorites {
       &::before {
-        mask-image: url("../../img/icons/stack.svg#star");
+        mask-image: url("../img/icons/stack.svg#star");
       }
     }
 
     &--ask {
       &::before {
-        mask-image: url("../../img/icons/stack.svg#ask");
+        mask-image: url("../img/icons/stack.svg#ask");
       }
     }
 
     &--actions {
       &::before {
-        mask-image: url("../../img/icons/stack.svg#three-dots");
+        mask-image: url("../img/icons/stack.svg#three-dots");
       }
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 }

@@ -1,8 +1,7 @@
 .main {
   &__container {
     @include container;
-    background-color: $gray-5;
-
+    background-color: $gray-30;
     height: calc(100vh - 60px);
   }
 }

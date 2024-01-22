@@ -1,3 +1,3 @@
-import { initFillProgress } from "./progress-bar.js";
+import { initFunctions } from "./init-function.js";
 
-window.onload = initFillProgress;
+window.onload = initFunctions;

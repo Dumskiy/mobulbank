@@ -10,6 +10,8 @@
   padding: 0;
 
   &__body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -17,10 +19,6 @@
     font-size: rem(16);
     line-height: rem(20);
     font-weight: 400;
-    color: $gray-60;
-
-    // min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    color: $gray-90;
   }
 }

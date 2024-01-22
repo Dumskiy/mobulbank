@@ -1,7 +1,7 @@
-const ATTRIBUTE_PROGRESS = 'data-prc';
+const ATTRIBUTE_PROGRESS = 'data-progress-percent';
 const CLASS_CIRCLE = '.indicator__progress-circle';
 const CLASS_INDICATOR = '.indicator';
-const CLASS_INDICATOR_VALUE = '.indicator__value';
+const CLASS_PROGRESS_VALUE = '.indicator__progress-value';
 
 const fillProgressBar = (indicator, progress) => {
   const circle = indicator.querySelector(CLASS_CIRCLE);
@@ -12,7 +12,7 @@ const fillProgressBar = (indicator, progress) => {
 }
 
 const fillProgressValue = (indicator, progress) => {
-  const elementValue = indicator.querySelector(CLASS_INDICATOR_VALUE);
+  const elementValue = indicator.querySelector(CLASS_PROGRESS_VALUE);
   const speed = 30;
   let progressStart = 0;
 
@@ -34,8 +34,11 @@ export const initFillProgress = () => {
   indicators.forEach((indicator) => {
     if (indicator.hasAttribute(ATTRIBUTE_PROGRESS)) {
       const progress = Number(indicator.getAttribute(ATTRIBUTE_PROGRESS));
-      fillProgressBar(indicator, progress);
-      fillProgressValue(indicator, progress);
+
+      if (progress > 0) {
+        fillProgressBar(indicator, progress);
+        fillProgressValue(indicator, progress);
+      }
     }
   });
 }

@@ -1,12 +1,12 @@
-.order-status {
-  background-color: $green-10;
-  padding: 3px 8px;
-  color: $white;
+.payment-status {
   width: fit-content;
-  text-align: center;
+  padding: 3px 8px;
   font-size: rem(11);
   font-weight: 500;
   line-height: rem(13);
+  text-align: center;
+  color: $white;
+  background-color: $green-30;
   border-radius: 9px;
 
   &__state {

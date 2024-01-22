@@ -1,17 +1,20 @@
 .navigation {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
+
+  &__list:first-child {
+    max-width: 315px;
+  }
 
   &__link {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 55%;
     transform: translate(-50%, -50%);
     min-width: 42px;
     min-height: 42px;
-    mask-image: url("../../img/icons/stack.svg#circle-with-cross");
+    mask-image: url("../img/icons/stack.svg#circle-with-cross");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
@@ -20,6 +23,14 @@
     &:hover,
     &:focus {
       opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    @include desktop {
+      left: 50%;
     }
   }
 }

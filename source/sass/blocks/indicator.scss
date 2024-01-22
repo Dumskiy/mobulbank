@@ -1,40 +1,31 @@
 .indicator {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  column-gap: 15px;
 
   &__link {
-    color: $blue-10;
-    text-decoration-style: dotted;
-    text-decoration-skip-ink: none;
-
+    width: 85px;
     font-size: rem(8);
     line-height: rem(10);
+    text-align: center;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: none;
+    color: $blue-20;
   }
 
   &__progress-wrapper {
     position: relative;
-
-    // &--class {
-
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     width: 44px;
-    //     height: 44px;
-    //   }
-    // }
   }
 
-  &__value {
+  &__progress-value {
     position: absolute;
-    margin: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    font-size: rem(12);
+    margin: 0;
+    font-size: rem(15);
     font-weight: 500;
-
   }
 
   &__progress-bar {
@@ -43,5 +34,30 @@
 
   &__progress-circle {
     transition: stroke-dashoffset 4s;
+  }
+
+  &__class-wrapper {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    background-color: $green-10;
+    border-radius: 50%;
+  }
+
+  &__class-value,
+  &__class-text {
+    margin: 0;
+    text-align: center;
+    color: $white;
+  }
+
+  &__class-value {
+    font-size: rem(25);
+    line-height: rem(30);
+  }
+
+  &__class-text {
+    font-size: rem(8);
+    line-height: rem(8);
   }
 }

@@ -6,25 +6,31 @@
   &__label {
     width: 18px;
     height: 18px;
-    cursor: pointer;
-    mask-image: url("../../img/icons/stack.svg#search");
+    mask-image: url("../img/icons/stack.svg#search");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: cover;
-    background-color: $gray-60;
+    background-color: $gray-90;
+    cursor: pointer;
   }
 
   &__field {
     @include clear-input;
-    color: #2b2b2b;
+    width: 62px;
     font-size: rem(14);
     line-height: rem(16);
-    width: 62px;
     text-transform: uppercase;
+    color: $gray-90;
 
     &::placeholder {
-      color: inherit;
       font-size: inherit;
+      color: inherit;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      width: 200px;
+      outline: none;
     }
   }
 }

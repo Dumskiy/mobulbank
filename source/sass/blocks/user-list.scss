@@ -1,18 +1,18 @@
 .user-list {
   @include clear-list;
   display: flex;
-  color: $white;
   font-size: rem(14);
   line-height: rem(60);
   text-transform: uppercase;
+  color: $white;
 
   &__item {
-    padding: 0 15px;
+    padding: 0 17px;
 
     &--dropdown {
       display: flex;
-      column-gap: 5px;
       align-items: center;
+      column-gap: 5px;
 
       &:hover,
       &:focus-within {
@@ -25,7 +25,7 @@
         content: "";
         width: 7px;
         height: 4px;
-        mask-image: url("../../img/icons/stack.svg#arrow-down");
+        mask-image: url("../img/icons/stack.svg#arrow-down");
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: cover;
@@ -37,13 +37,17 @@
 
   &__link {
     position: relative;
-    color: inherit;
-    text-decoration: none;
     display: block;
+    text-decoration: none;
+    color: inherit;
 
     &:hover,
     &:focus {
       opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
 
     &--notice {
@@ -52,13 +56,13 @@
 
       &::before {
         content: "";
-        width: 15px;
-        height: 19px;
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 15px;
+        height: 19px;
         transform: translate(-50%, -50%);
-        mask-image: url("../../img/icons/stack.svg#bell");
+        mask-image: url("../img/icons/stack.svg#bell");
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: cover;
@@ -75,7 +79,7 @@
         content: "";
         width: 17px;
         height: 17px;
-        mask-image: url("../../img/icons/stack.svg#building");
+        mask-image: url("../img/icons/stack.svg#building");
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: cover;
@@ -86,17 +90,20 @@
 
   &__quantity-notice {
     position: absolute;
-    width: 17px;
-    height: 17px;
-    text-align: center;
-    background-color: $red-10;
-    font-family: $special-font;
-    font-size: rem(10);
-    line-height: rem(14);
-    font-weight: 500;
-    border: 2px solid $blue-5;
-    border-radius: 50%;
     left: 50%;
     bottom: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    font-family: $special-font;
+    font-size: rem(10);
+    font-weight: 500;
+    line-height: rem(14);
+    text-align: center;
+    background-color: $red-20;
+    border: 2px solid $blue-10;
+    border-radius: 50%;
   }
 }

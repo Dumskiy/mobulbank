@@ -1,33 +1,26 @@
 .order {
-  width: prc(900, 1280);
+  width: 900px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
   margin-left: auto;
-
-  // max-height: 100%;
-  // display: grid;
-  // grid-template-rows: auto 1fr auto;
-
-  height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-
   background-color: $white;
   box-shadow: -8px 9px 25px rgba(49, 68, 93, 0.23);
 
   &__header {
-    padding: 16px 32px;
-    background-color: $gray-10;
-
     display: flex;
     align-items: center;
     column-gap: 27px;
+    padding: 16px 32px;
+    background-color: $gray-10;
   }
 
   &__title {
     order: 2;
     margin: 0;
     font-size: rem(24);
-    line-height: rem(28);
     font-weight: 300;
+    line-height: rem(28);
   }
 
   &__button {
@@ -35,53 +28,54 @@
     order: 1;
     width: 16px;
     height: 16px;
-    cursor: pointer;
-
-    mask-image: url("../../img/icons/stack.svg#cross");
+    mask-image: url("../img/icons/stack.svg#cross");
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 16px auto;
-    background-color: $gray-60;
+    background-color: $gray-90;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 
   &__content {
+    margin-right: 5px;
     padding: 26px 0;
-    padding-left: prc(164, 900);
-    padding-right: prc(151, 900);
-
-    flex: 1 1 auto;
-
+    padding-left: prc(184, 900);
+    padding-right: prc(160, 900);
     overflow-y: scroll;
-
     scrollbar-width: thin;
-    scrollbar-color: $gray-18 $gray-15;
+    scrollbar-color: $gray-40 $gray-20;
 
     &::-webkit-scrollbar {
       width: 6px;
     }
 
     &::-webkit-scrollbar-track {
-      background-color: $gray-15;
+      margin: 3px 0 6px;
+      background-color: $gray-20;
       border-radius: 3px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $gray-18;
+      background-color: $gray-40;
       border-radius: 3px;
 
       &:hover {
-        background-color: $gray-19;
+        background-color: $gray-50;
       }
     }
   }
 
   &__payment {
-    margin-bottom: 10px;
-  }
-
-  &__status {
-    margin: 0 auto;
-    margin-bottom: 16px;
+    margin: 0 0 16px -15px;
   }
 
   &__inner {
@@ -91,21 +85,21 @@
   &__total {
     margin: 0;
     padding: 20px 30px;
-    background-color: $gray-15;
+    background-color: $gray-20;
+    box-shadow: (0 0 1px rgba($black, 0.24)), (0 4px 15px rgba($black, 0.09)), (0 2px 3px rgba($black, 0.07));
     border-radius: 0 0 2px 2px;
-    box-shadow: (0px 0px 1px rgba(0, 0, 0, 0.24)), (0px 4px 15px rgba(0, 0, 0, 0.09)), (0px 2px 3px rgba(0, 0, 0, 0.07));
   }
 
   &__commission {
     margin: 0;
-    color: $gray-30;
     font-size: rem(12);
     line-height: rem(16);
+    color: $gray-70;
   }
 
   &__footer {
     padding-left: prc(184, 900);
     padding-right: prc(171, 900);
-    box-shadow: (0px 0px 1px rgba(0, 0, 0, 0.24)), (0px 0px 15px rgba(0, 0, 0, 0.09));
+    box-shadow: (0 0 1px rgba($black, 0.24)), (0 0 15px rgba($black, 0.09));
   }
 }

@@ -5,6 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Модульбанк</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="img/favicons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/firasans-medium.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-light.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-regular.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-medium.woff2" as="font">
+  <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -42,7 +53,7 @@
           <li class="user-list__item">
             <a class="user-list__link user-list__link--notice" href="#">
               <span class="visually-hidden">Уведомления</span>
-              <span class="user-list__quantity-notice">2</span>
+              <span class="user-list__quantity-notice" data-quantity-notice="2">0</span>
             </a>
           </li>
           <li class="user-list__item user-list__item--dropdown">
@@ -54,29 +65,26 @@
       </nav>
     </div>
   </header>
-
   <main class="main">
     <div class="main__container">
+      <h1 class="visually-hidden">Модульбанк — первый банк для предпринимателей.</h1>
       <div class="order">
         <header class="order__header">
-          <h2 class="order__title">Платежное поручение № <span class="order__number">5241234</span> от <span class="order__date">23.09.2015</span></h2>
+          <h2 class="order__title">Платежное поручение № <span class="order__number">5241234</span> от <span
+              class="order__date">23.09.2015</span></h2>
           <button class="order__button" type="button">
             <span class="visually-hidden">Закрыть</span>
           </button>
         </header>
-
         <div class="order__content">
-
           <div class="order__payment payment">
             <p class="payment__sum">– 23 500,00 ₽</p>
             <p class="payment__sent">со счета: <span class="payment__account">Расчетный счет (***012345)</span></p>
+            <p class="payment__status payment-status">
+              <span class="payment-status__state">Исполнен</span>,&nbsp;
+              <span class="payment-status__date">21 июня 15:33</span>
+            </p>
           </div>
-
-          <p class="order__status order-status">
-            <span class="order-status__state">Исполнен</span>,&nbsp;
-            <span class="order-status__date">21 июня 15:33</span>
-          </p>
-
           <div class="order__inner">
             <div class="order__company company-card">
               <div class="company-card__details company-details">
@@ -97,47 +105,54 @@
                 </ul>
               </div>
               <ul class="company-card__performance">
-                <li class="performance__item indicator" data-prc="88">
-                  <a class="indicator__link" href="#">Высокая финансовая усойчивость</a>
+                <li class="performance__item indicator" data-progress-percent="88">
+                  <a class="indicator__link" href="#">Высокая финансовая устойчивость</a>
                   <div class="indicator__progress-wrapper">
-                    <p class="indicator__value">88</p>
-                    <svg class="indicator__progress-bar" width="44" height="44" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                      <circle r="21" cx="22" cy="22" fill="transparent" stroke="#e6e6e6" stroke-width="2" stroke-dasharray="131.95px" stroke-dashoffset="0"></circle>
-                      <circle class="indicator__progress-circle" r="21" cx="22" cy="22" stroke="#6eba64" stroke-width="2" stroke-linecap="butt" stroke-dashoffset="131.95px" fill="transparent" stroke-dasharray="131.95px"></circle>
+                    <p class="indicator__progress-value">0</p>
+                    <svg class="indicator__progress-bar" width="44" height="44" viewBox="0 0 44 44" version="1.1"
+                      xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                      <circle r="21" cx="22" cy="22" fill="transparent" stroke="#e6e6e6" stroke-width="2"
+                        stroke-dasharray="131.95px" stroke-dashoffset="0"></circle>
+                      <circle class="indicator__progress-circle" r="21" cx="22" cy="22" stroke="#6eba64"
+                        stroke-width="2" stroke-linecap="butt" stroke-dashoffset="131.95px" fill="transparent"
+                        stroke-dasharray="131.95px"></circle>
                     </svg>
-                    </div>
+                  </div>
                 </li>
-                <li class="performance__item indicator" data-prc="100">
+                <li class="performance__item indicator" data-progress-percent="100">
                   <a class="indicator__link" href="#">Высокая благонадежность</a>
                   <div class="indicator__progress-wrapper">
-                    <p class="indicator__value">100</p>
-                    <svg class="indicator__progress-bar" width="44" height="44" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
-                      <circle r="21" cx="22" cy="22" fill="transparent" stroke="#e6e6e6" stroke-width="2" stroke-dasharray="131.95px" stroke-dashoffset="0"></circle>
-                      <circle class="indicator__progress-circle" r="21" cx="22" cy="22" stroke="#6eba64" stroke-width="2" stroke-linecap="butt" stroke-dashoffset="131.95px" fill="transparent" stroke-dasharray="131.95px"></circle>
+                    <p class="indicator__progress-value">0</p>
+                    <svg class="indicator__progress-bar" width="44" height="44" viewBox="0 0 44 44" version="1.1"
+                      xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+                      <circle r="21" cx="22" cy="22" fill="transparent" stroke="#e6e6e6" stroke-width="2"
+                        stroke-dasharray="131.95px" stroke-dashoffset="0"></circle>
+                      <circle class="indicator__progress-circle" r="21" cx="22" cy="22" stroke="#6eba64"
+                        stroke-width="2" stroke-linecap="butt" stroke-dashoffset="131.95px" fill="transparent"
+                        stroke-dasharray="131.95px"></circle>
                     </svg>
                   </div>
                 </li>
                 <li class="performance__item indicator">
                   <a class="indicator__link" href="#">Кредитоспособность 44,5 млрд ₽</a>
-                  <div class="indicator__progress-wrapper indicator__progress-wrapper--class">
-                    <p class="indicator__value">1 класс</p>
+                  <div class="indicator__class-wrapper">
+                    <p class="indicator__class-value">1</p>
+                    <p class="indicator__class-text">Класс</p>
                   </div>
                 </li>
               </ul>
             </div>
-
             <p class="order__total">
-              Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽
+              Оплата за партию ромашек и одуванчиков по договору <br>14023-023 от 14.05.2015 г. Сумма 11430-00. В том
+              числе НДС <br>18% - 1450,00 ₽
             </p>
           </div>
-
           <p class="order__commission">
             Комиссия банка: 70 р.<br>
             Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным.
-            Точный размер комиссии определяется после передачи платежного документа на обработку в банк.
+            Точный размер комиссии определяется после передачи платежного <br>документа на обработку в банк.
           </p>
         </div>
-
         <footer class="order__footer">
           <ul class="order__toolbar toolbar">
             <li class="toolbar__item">
